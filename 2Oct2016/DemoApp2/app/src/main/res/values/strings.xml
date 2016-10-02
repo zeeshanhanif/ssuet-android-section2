@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="firstName">Hello Name</string>
+
+    <!-- Form fields  -->
+    <string name="lastName">Hello New Last Name</string>
+    <string name="clickVal">Click Here</string>
+    <string name="hello">Hello World</string>
+</resources>
