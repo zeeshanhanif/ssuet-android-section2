@@ -1,0 +1,28 @@
+package com.example.android.listview1;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ArrayList<User> list = new ArrayList<>();
+        for(int i = 1 ; i <= 100; i++){
+            User u = new User("User " + i, i);
+            list.add(u);
+        }
+
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.custom_row, list);
+        CustomAdapter adapter = new CustomAdapter(this, list);
+        ListView listView = (ListView) findViewById(R.id.list01);
+        listView.setAdapter(adapter);
+    }
+}
